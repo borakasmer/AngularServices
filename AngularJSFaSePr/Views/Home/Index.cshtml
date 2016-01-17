@@ -1,0 +1,39 @@
+﻿<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/friends.js"></script>
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<div ng-app="app" ng-controller="FriendController">
+    <form class="well">
+        <label>Name</label>
+        <input type="text" name="name" ng-model="newfriend.name" />
+        <label>Email</label>
+        <input type="text" name="email" ng-model="newfriend.email" />
+        <label>Phone</label>
+        <input type="text" name="phone" ng-model="newfriend.phone" />
+        <br />
+        <input type="hidden" ng-model="newfriend.id" />
+        <input type="button" value="Save" ng-click="saveFriend()" />
+    </form>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="friend in friends">
+                <td>{{ friend.name }}</td>
+                <td>{{ friend.email }}</td>
+                <td>{{ friend.phone }}</td>
+                <td>
+                    <a href="#" ng-click="edit(friend.id)">edit</a> |
+                    <a href="#" ng-click="delete(friend.id)">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
