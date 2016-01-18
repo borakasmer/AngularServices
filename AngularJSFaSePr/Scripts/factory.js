@@ -28,7 +28,7 @@ module.controller('CityController', function ($scope, DropDownFactory) {
     $scope.cityList = DropDownFactory.getAllData();
     $scope.update = function () {        
         $scope.Plaka = DropDownFactory.writePlaka($scope.selectedItem)
-    };
+    };    
     /*angular.forEach($scope.cityList, function (item) {
         console.log(item);
     });*/

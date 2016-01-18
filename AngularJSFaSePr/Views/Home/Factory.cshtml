@@ -2,6 +2,6 @@
 <script src="~/Scripts/factory.js"></script>
 
 <div ng-app="app" ng-controller="CityController">   
-    <select ng-model="selectedItem" ng-options="item.plaka as item.il for item in cityList" ng-change="update()"></select>
+    <select ng-model="selectedItem" ng-options="item.plaka as item.il for item in cityList" ng-change="update()" ng-init="selectedItem = selectedItem || cityList[33].plaka"></select>
     <h1>{{Plaka}}</h1>
 </div>
