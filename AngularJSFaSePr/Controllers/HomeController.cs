@@ -17,5 +17,10 @@ namespace AngularJSFaSePr.Controllers
         {
             return View();
         }
+        public ActionResult Provider()
+        {
+
+            return View();
+        }
     }
 }
