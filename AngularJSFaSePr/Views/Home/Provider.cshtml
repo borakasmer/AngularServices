@@ -16,7 +16,10 @@
 </head>
 <body>
     <div ng-app='app' ng-controller='myCtrl'>
-        {{Message}}
+        <b>Ad:</b> <input type="text" ng-model="UserName" focus/>
+        <b>Soyad:</b> <input type="text" ng-model="UserSurname" /> 
+        <input type="button" ng-click="SetUser()" value="Giriş" /><br /><br />
+        <h1>{{Message}}</h1>
     </div>
 </body>
 </html>
